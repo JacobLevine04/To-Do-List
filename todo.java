@@ -57,7 +57,7 @@ public class ToDoListApp {
         // add the main panel to the frame
         frame.add(panel);
 
-        // Action to add tasks (shared logic for button and Enter key)
+        // action to add tasks (shared logic for button and Enter key)
         Runnable addTaskAction = () -> {
             String task = taskInput.getText().trim();
             if (!task.isEmpty()) {
@@ -66,13 +66,13 @@ public class ToDoListApp {
             }
         };
 
-        // Add button action listener
+        // add button action listener
         addButton.addActionListener(e -> addTaskAction.run());
 
-        // Add Enter key listener to the task input field
+        // add Enter key listener to the task input field
         taskInput.addActionListener(e -> addTaskAction.run());
 
-        // Remove button action listener
+        // remove button action listener
         removeButton.addActionListener(e -> {
             int selectedIndex = taskList.getSelectedIndex();
             if (selectedIndex != -1) {
@@ -80,7 +80,7 @@ public class ToDoListApp {
             }
         });
 
-        // Make the frame visible
+        // make the frame visible
         frame.setVisible(true);
     }
 
